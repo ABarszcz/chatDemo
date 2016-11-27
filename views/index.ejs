@@ -1,0 +1,9 @@
+<% include partials/header.ejs %>
+
+<h1><%= title %></h1>
+<ul id="messages-area"></ul>
+<form id="form" onsubmit="return false;">
+  <input id="new-message" type="text" /><button onclick="sendFunction()">Send</button>
+</form>
+
+<% include partials/footer.ejs %>
