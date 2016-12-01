@@ -28,23 +28,23 @@ app.use('/', routes);
 app.use('/users', users);
 
 /* Listen for Socket.io events */
-app.io.on('connection', function(socket){
+app.io.on('connection', function(socket) {
   //do things here when a user connects
   console.log('a user connected');
   app.io.emit('conn');
 
   //do things here when a user disconnects
-  socket.on('disconnect', function(){
+  socket.on('disconnect', function() {
     console.log('a user disconnected');
     app.io.emit('disconn');
   });
 
   //do things here when a message is sent
-  socket.on('new message', function(msg){
+  socket.on('new message', function(msg) {
     console.log('new message: ' + msg);
-      app.io.emit('chat message' , msg); //send the message through socket.io, caught by the script
-      });
+    app.io.emit('chat message', msg); //send the message through socket.io, caught by the script
   });
+});
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next) {

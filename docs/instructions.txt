@@ -3,7 +3,7 @@
 3. Change the title in routes/index.js to "Chat Room Demo"
 4. Edit index.ejs:
 	3.1. Attach the given stylesheet (bootstrap in this case)
-	3.2. Add the unordered list for the messages area (textarea later?)
+	3.2. Add the unordered list for the messages area
 	3.3. Add the form with the input and button for sending messages
 	3.4. Add the JavaScript links
 		3.4.1. <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
@@ -18,6 +18,7 @@
 		3.5.5. ~ disconnection message, and adds "a user disconnected" when it is heard
 		*3.5.6. ~ typing message, and somehow say the user is typing when it is heard
 		*3.5.7. ~ no longer typing message, and somehow remove the user is typing message when it is heard
+		Note: * = not done yet
 5. Edit app.js
 	5.1. Add socket.io to app.io
 	5.2. Add the listeners for socket.io events
